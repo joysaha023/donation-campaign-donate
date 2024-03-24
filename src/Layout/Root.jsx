@@ -1,10 +1,10 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom';
+import NavBar from '../Pages/Shared/Navbar/NavBar.jsx';
 
 const Root = () => {
     return (
         <div>
-            <h3>Navbar..</h3>
+            <NavBar></NavBar>
             <Outlet></Outlet>
         </div>
     );
