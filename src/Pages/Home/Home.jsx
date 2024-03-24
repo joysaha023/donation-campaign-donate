@@ -1,11 +1,12 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
+import CategoryList from '../../components/CategoryList/CategoryList';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h2>Home page</h2>
+            <CategoryList></CategoryList>
         </div>
     );
 };
