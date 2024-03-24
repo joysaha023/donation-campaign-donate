@@ -1,17 +1,25 @@
 import React from "react";
 import useDonationData from "../../Hooks/useDonationData";
 import useLocalStorage from "../../Hooks/useLocalStorage";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import {
+  PieChart,
+  Pie,
+  Sector,
+  Cell,
+  ResponsiveContainer,
+  Tooltip,
+  Legend,
+} from "recharts";
 
 const Statistics = () => {
-  const { data : donateData } = useDonationData();
+  const { data: donateData } = useDonationData();
   const { localData } = useLocalStorage();
 
   const data = [
     { name: "Your Donation", value: localData.length },
     { name: "Available Donation", value: donateData.length - localData.length },
   ];
-  const COLORS = ["#0088FE", "#00C49F"];
+  const COLORS = ["#FF444A", "#00C49F"];
 
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({
@@ -35,12 +43,31 @@ const Statistics = () => {
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="central"
       >
-        {`${(percent * 100).toFixed(0)}%`}
+        {`${(percent * 100).toFixed(2)}%`}
       </text>
     );
   };
+
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip"
+            style={{
+                backgroundColor: "#ffff",
+                border: " 1px solid #AAA",
+                padding: "5px",
+            }}
+        >
+          <p className="label">{`${payload[0].name} : ${payload[0].value}`}</p>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   return (
-    <div style={{width: "100%", height: "80vh",}}>
+    <div style={{ width: "100%", height: "80vh" }}>
       <ResponsiveContainer>
         <PieChart>
           <Pie
@@ -54,9 +81,14 @@ const Statistics = () => {
             dataKey="value"
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              <Cell
+                key={`cell-${index}`}
+                fill={COLORS[index % COLORS.length]}
+              />
             ))}
           </Pie>
+          <Tooltip content={<CustomTooltip />} />
+        <Legend />
         </PieChart>
       </ResponsiveContainer>
     </div>

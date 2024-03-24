@@ -1,4 +1,5 @@
 import { json } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const saveToLocalStorage = (data) => {
     const saveData = JSON.parse(localStorage.getItem("donate")) || [];
@@ -6,9 +7,9 @@ export const saveToLocalStorage = (data) => {
     if (!existedData){
         saveData.push(data);
         localStorage.setItem("donate", JSON.stringify(saveData));
-        alert("Added successfully data");
+        toast.success("Added successfully");
     }else{
-        alert("Already existed....");
+        toast.warning("Already exist");
     }
 };
 
