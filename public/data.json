@@ -4,84 +4,96 @@
       "title": "School Supplies Drive",
       "image": "https://i.ibb.co/zHz5PrC/ed.png",
       "description": "Provide essential school supplies to children in underprivileged communities to support their education.",
-      "category": "Education"
+      "category": "Education",
+      "price": 500
     },
     {
       "id": 2,
       "title": "Medical Outreach Program",
       "image": "https://i.ibb.co/Nrcms3Y/ji.png",
       "description": "Support medical outreach programs to provide healthcare services to remote areas lacking access to medical facilities.",
-      "category": "Health"
+      "category": "Health",
+      "price": 700
     },
     {
       "id": 3,
       "title": "Food Bank Initiative",
       "image": "https://i.ibb.co/T8wpLv3/fgd.png",
       "description": "Donate non-perishable food items to food banks to help alleviate hunger and food insecurity in the community.",
-      "category": "Food"
+      "category": "Food",
+      "price": 900
     },
     {
       "id": 4,
       "title": "Warm Clothing Drive",
       "image": "https://i.ibb.co/V3q5FDC/cl.png",
       "description": "Collect warm clothing items such as jackets, sweaters, and blankets to help those in need stay warm during cold weather.",
-      "category": "Clothing"
+      "category": "Clothing",
+      "price": 300
     },
     {
       "id": 5,
       "title": "Scholarship Program",
       "image": "https://i.ibb.co/zHz5PrC/ed.png",
       "description": "Support scholarships for deserving students who lack the financial means to pursue higher education.",
-      "category": "Education"
+      "category": "Education",
+      "price": 500
     },
     {
       "id": 6,
       "title": "Mobile Health Clinic",
       "image": "https://i.ibb.co/Nrcms3Y/ji.png",
       "description": "Fund a mobile health clinic to provide medical check-ups and basic healthcare services to underserved communities.",
-      "category": "Health"
+      "category": "Health",
+      "price": 700
     },
     {
       "id": 7,
       "title": "Winter Coat Drive",
       "image": "https://i.ibb.co/V3q5FDC/cl.png",
       "description": "Collect coats and winter clothing to distribute to homeless individuals and families during the cold season.",
-      "category": "Clothing"
+      "category": "Clothing",
+      "price": 300
     },
     {
       "id": 8,
       "title": "Community Kitchen Project",
       "image": "https://i.ibb.co/T8wpLv3/fgd.png",
       "description": "Support the establishment of community kitchens to provide nutritious meals to low-income families and individuals.",
-      "category": "Food"
+      "category": "Food",
+      "price": 900
     },
     {
       "id": 9,
       "title": "Literacy Program",
       "image": "https://i.ibb.co/zHz5PrC/ed.png",
       "description": "Fund literacy programs aimed at improving reading and writing skills among disadvantaged populations.",
-      "category": "Education"
+      "category": "Education",
+      "price": 500
     },
     {
       "id": 10,
       "title": "Health Education Campaign",
       "image": "https://i.ibb.co/Nrcms3Y/ji.png",
       "description": "Support health education initiatives to raise awareness about preventive healthcare practices and disease management.",
-      "category": "Health"
+      "category": "Health",
+      "price": 700
     },
     {
       "id": 11,
       "title": "Clothing Voucher Program",
       "image": "https://i.ibb.co/V3q5FDC/cl.png",
       "description": "Provide clothing vouchers to individuals and families in need to purchase essential clothing items.",
-      "category": "Clothing"
+      "category": "Clothing",
+      "price": 300
     },
     {
       "id": 12,
       "title": "Community Garden Project",
       "image": "https://i.ibb.co/T8wpLv3/fgd.png",
       "description": "Establish community gardens to promote food security and provide access to fresh produce for low-income communities.",
-      "category": "Food"
+      "category": "Food",
+      "price": 900
     }
   ]
   
