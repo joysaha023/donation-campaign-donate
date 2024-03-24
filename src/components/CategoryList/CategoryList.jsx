@@ -3,7 +3,7 @@ import useDonationData from '../../Hooks/useDonationData';
 import CardDefault from '../Card/CardDefault';
 
 const CategoryList = () => {
-    const {data, loading} = useDonationData();
+    
     
     return (
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl py-3 mx-auto my-12'>
