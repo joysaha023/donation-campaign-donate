@@ -23,7 +23,7 @@ const Home = () => {
     }
     return (
         <div>
-            <Banner setValue={setValue} handleSearch={handleSearch}></Banner>
+            <Banner value={value} setValue={setValue} handleSearch={handleSearch}></Banner>
             <CategoryList filterData={filterData}></CategoryList>
         </div>
     );

@@ -1,7 +1,7 @@
 import { Button, Input, Typography } from "@material-tailwind/react";
 import React from 'react';
 
-const Banner = ({setValue, handleSearch}) => {
+const Banner = ({value, setValue, handleSearch}) => {
 
     
    const clearInput = () => {
@@ -18,7 +18,7 @@ const Banner = ({setValue, handleSearch}) => {
         <Input
           type="text"
           label="Search"
-          
+          value={value}
           onChange={(e) => setValue(e.target.value)}
           className="pr-20"
           containerProps={{
