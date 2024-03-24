@@ -11,11 +11,16 @@ import {
     Tooltip,
     Button,
   } from "@material-tailwind/react";
+import { saveToLocalStorage } from '../../utilites/localStorage';
 
 const DonationDetails = () => {
     const [singleData, setSingleData] = useState({});
     const { id } = useParams();
     const { data, loading} = useDonationData();
+
+    const handleDonate = () => {
+        saveToLocalStorage(singleData)
+    }
     
     useEffect(() => {
         if(data) {
@@ -38,7 +43,7 @@ const DonationDetails = () => {
             alt={title}
           />
           <div className='absolute bottom-0 bg-opacity-40 bg-black w-full h-28 pl-8'>
-            <Button className='mt-8 rounded-lg capitalize text-xl bg-red-500' size='md'>Donate ${price}</Button>
+            <Button onClick={handleDonate} className='mt-8 rounded-lg capitalize text-xl bg-red-500' size='md'>Donate ${price}</Button>
           </div>
         </CardHeader>
         <CardBody>
