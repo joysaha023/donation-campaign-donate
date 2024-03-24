@@ -4,7 +4,9 @@ import React from 'react';
 const Banner = ({setValue, handleSearch}) => {
 
     
-   
+   const clearInput = () => {
+    setValue("");
+   }
 
   return (
     <div className="h-[450px] relative border flex flex-col justify-center items-center border-y-amber-400">
@@ -26,7 +28,7 @@ const Banner = ({setValue, handleSearch}) => {
         <Button
           size="sm"
           color="red"
-          onClick={handleSearch}
+          onClick={() => {handleSearch(); clearInput();}}
           className="!absolute right-1 top-1 rounded"
         >
           SEARCH

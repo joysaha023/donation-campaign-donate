@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import useDonationData from '../../Hooks/useDonationData';
@@ -8,10 +8,15 @@ const Home = () => {
     const {data, loading} = useDonationData();
     const [filterData, setFilterData] = useState([]);
 
+    useEffect(() => {
+        setFilterData(data);
+    }, [data])
+
+
     const handleSearch = () => {
         if(value.trim() != ""){
-            const filterData = data.filter((item) => item.category.toLowecase().includes(value.toLowerCase()))
-            setFilterData(filterData)
+            const filteredData = data.filter((item) => item.category.toLowerCase().includes(value.toLowerCase()))
+            setFilterData(filteredData)
         }else{
             setFilterData(data)
         }
@@ -19,7 +24,7 @@ const Home = () => {
     return (
         <div>
             <Banner setValue={setValue} handleSearch={handleSearch}></Banner>
-            <CategoryList></CategoryList>
+            <CategoryList filterData={filterData}></CategoryList>
         </div>
     );
 };
