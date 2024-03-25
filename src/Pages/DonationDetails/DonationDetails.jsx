@@ -35,7 +35,7 @@ const DonationDetails = () => {
         return<CustomSpinner></CustomSpinner>
     }
     return (
-        <Card className="mt-12 w-full rounded-md shadow-none lg:px-20 overflow-hidden">
+        <Card className="mt-12 w-full rounded-md shadow-none lg:px-20 overflow-hidden px-2">
         <CardHeader
           floated={false}
           shadow={false}

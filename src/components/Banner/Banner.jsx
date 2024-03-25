@@ -9,11 +9,11 @@ const Banner = ({value, setValue, handleSearch}) => {
    }
 
   return (
-    <div className="h-[450px] relative border flex flex-col justify-center items-center border-y-amber-400">
+    <div className="h-[450px] relative flex flex-col justify-center items-center px-2">
         <dir className="absolute inset-0 bg-[url('/images/bg.png')] bg-cover bg-center bg-no-repeat opacity-10">
 
         </dir>
-      <Typography className="mb-4" variant="h2">I Grow By Helping People In Need</Typography>
+      <Typography className="mb-4 text-center" variant="h2">I Grow By Helping People In Need</Typography>
       <div className="relative flex w-full max-w-[24rem]">
         <Input
           type="text"

@@ -9,7 +9,7 @@ const CategoryList = ({filterData, loading}) => {
     }
     
     return (
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl py-3 mx-auto my-12'>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl py-3 px-2 mx-auto my-12'>
             {
                 filterData.map((item) => <CardDefault key={item.id} item={item}></CardDefault>)
             }

@@ -79,10 +79,10 @@ const NavBar = () => {
     }, []);
 
     return (
-        <Navbar className="mx-auto max-w-7xl shadow-none py-3m border border-red-500">
+        <Navbar className="mx-auto max-w-7xl shadow-none py-3m">
       <div className="flex items-center justify-between text-blue-gray-900">
        <div>
-        <img src="/images/Logo.png" alt="" />
+        <img className='w-3/4 lg:w-full' src="/images/Logo.png" alt="" />
        </div>
         <div className="hidden lg:block">
           <NavList />
